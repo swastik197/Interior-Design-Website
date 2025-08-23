@@ -36,7 +36,7 @@ export default function Home() {
           </div>
         </nav>
         <section className="flex flex-col items-center justify-center min-h-[700px] md:min-h-screen min-w-full rounded-b-4xl bg-cover bg-center bg-no-repeat px-4 pt-20" style={{ backgroundImage: "url('/0502010004-01-Minimalist-Interior-Style.jpg')" }}>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center">Welcome to Website</h1>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center">Welcome to Website</h1>
           <p className="mt-4 text-base md:text-lg text-white text-center max-w-2xl">We offer a variety of services to help you succeed.</p>
           <button className="mt-6 px-4 md:px-6 py-2 md:py-3 bg-white text-blue-500 rounded-full hover:bg-gray-100 transition duration-300 text-sm md:text-base">
             Get Started
@@ -45,7 +45,7 @@ export default function Home() {
         <section className="w-full min-h-screen my-4 md:my-8 px-4 bg-white">
           {/* Mobile layout - stack vertically */}
           <div className="block md:hidden space-y-4">
-            <div className="w-full h-80 bg-gray-200 rounded-4xl relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/0502010004-01-Minimalist-Interior-Style.jpg')" }}>
+            <div className="w-full h-80 bg-gray-200 rounded-4xl relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/hero02.jpg')" }}>
               <div className="p-0 absolute bottom-0 left-0 right-0">
                 <div className="p-2 bg-white rounded-tr-3xl w-fit">
                   <p className="text-xs mx-2 font-semibold text-black border-1 border-black rounded-2xl px-1 py-1 mb-1">Gorgeous Interior</p>
