@@ -47,11 +47,11 @@ export default function Home() {
           <div className="block md:hidden space-y-4">
             <div className="w-full h-80 bg-gray-200 rounded-4xl relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/0502010004-01-Minimalist-Interior-Style.jpg')" }}>
               <div className="p-0 absolute bottom-0 left-0 right-0">
-                <div className="p-2 bg-white rounded-r-3xl w-fit">
+                <div className="p-2 bg-white rounded-tr-3xl w-fit">
                   <p className="text-xs mx-2 font-semibold text-black border-1 border-black rounded-2xl px-1 py-1 mb-1">Gorgeous Interior</p>
                 </div>
-                <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-r-3xl max-w-full font-bold">Design</p>
-                <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-r-3xl max-w-full font-bold">Services</p>
+                <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-tr-3xl max-w-full font-bold">Design</p>
+                <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-tr-3xl max-w-full font-bold">Services</p>
               </div>
             </div>
             <div className="bg-gray-300 p-4 h-32 flex items-center justify-center rounded-2xl">
@@ -66,11 +66,11 @@ export default function Home() {
           <div className="hidden md:grid grid-cols-3 grid-rows-3 gap-4 h-screen">
             <div className="p-1 bg-gray-200 col-span-2 row-span-3 rounded-4xl h-full relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/hero02.jpg')" }}>
               <div className="p-0 absolute bottom-0 left-0 right-0">
-                <div className="p-3 bg-white rounded-r-4xl w-fit">
+                <div className="p-3 bg-white rounded-tr-4xl w-fit">
                   <p className="text-lg mx-2 font-semibold text-black border-2 border-black rounded-3xl px-3 py-1 mb-2">Gorgeous Interior</p>
                 </div>
-                <p className="text-xl lg:text-6xl xl:text-8xl text-black p-3 px-4 bg-white w-fit rounded-r-4xl max-w-full font-bold">Design</p>
-                <p className="text-xl lg:text-6xl xl:text-8xl text-black p-3 px-4 bg-white w-fit rounded-r-4xl max-w-full font-bold">Services</p>
+                <p className="text-xl lg:text-6xl xl:text-8xl text-black p-3 px-4 bg-white w-fit rounded-tr-4xl max-w-full font-bold">Design</p>
+                <p className="text-xl lg:text-6xl xl:text-8xl text-black p-3 px-4 bg-white w-fit rounded-tr-4xl max-w-full font-bold">Services</p>
               </div>
             </div>
             <div className="bg-gray-300 p-4 flex items-center justify-center rounded-2xl">
