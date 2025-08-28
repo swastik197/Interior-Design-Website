@@ -51,6 +51,10 @@ export default function Home() {
                   <p className="text-xs mx-2 font-semibold text-black border-1 border-black rounded-2xl px-1 py-1 mb-1">Gorgeous Interior</p>
                 </div>
                 <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-tr-3xl max-w-full font-bold">Design</p>
+
+
+
+
                 <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-tr-3xl max-w-full font-bold">Services</p>
               </div>
             </div>
@@ -78,17 +82,17 @@ export default function Home() {
                 <div className="p-3 bg-white rounded-tr-4xl w-fit">
                   <p className="text-lg mx-2 font-semibold text-black border-2 border-black rounded-3xl px-3 py-1 mb-2">Gorgeous Interior</p>
                 </div>
-                <p className="text-xl lg:text-6xl xl:text-8xl text-black p-3 px-4 bg-white w-fit rounded-tr-4xl max-w-full font-bold">Design</p>
-                <p className="text-xl lg:text-6xl xl:text-8xl text-black p-3 px-4 bg-white w-fit rounded-tr-4xl max-w-full font-bold">Services</p>
+                <p className="text-8xl text-black p-3 px-4 bg-white w-fit rounded-tr-4xl max-w-full font-bold">Design</p>
+                <p className="text-8xl text-black p-3 px-4 bg-white w-fit rounded-tr-4xl max-w-full font-bold">Services</p>
               </div>
             </div>
             <div className="bg-stone-100 p-4 flex flex-col justify-center rounded-2xl ">
               <div>
-                <p className="border-2 rounded-2xl text-black px-2 py-1 w-fit">Asthetic</p>
-                <p className="text-sm md:text-base text-gray-700 my-2">
+                <p className="border-2 rounded-2xl text-black px-2 py-1 w-fit ">Asthetic</p>
+                <p className="text-sm md:text-base text-gray-700 my-2 truncate ">
                   Aesthetic designs where every<br />piece tells a story
                 </p>
-                <h1 className="text-lg md:text-4xl font-semibold text-gray-800">Into a gallery <br />of elegance</h1>
+                <h1 className="text-lg md:text-4xl font-semibold text-gray-800 truncate">Into a gallery <br />of elegance</h1>
               </div>
 
             </div>
@@ -97,23 +101,36 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full h-fit flex justify-between flex-wrap text-gray-800">
-          <div className="m-4">
-            <h1 className="sm:text-2xl md:text-7xl font-bold">500+</h1>
+        <section className="w-full h-fit flex justify-between flex-wrap text-gray-800 my-4">
+          <div className="mx-2 md:mx-20 md:my-8 flex flex-col items-center">
+            <h1 className="text-2xl md:text-7xl font-bold">500+</h1>
             <p className="text-xs md:text-lg text-gray-500 font-semibold">Products</p>
           </div>
-          <div className="m-4">
-            <h1 className="sm:text-2xl md:text-7xl  font-bold">20+</h1>
+          <div className="mx-2 md:mx-20 md:my-8 flex flex-col items-center">
+            <h1 className="text-2xl md:text-7xl  font-bold">20+</h1>
             <p className="text-xs md:text-lg text-gray-500 font-semibold">Projects</p>
-            </div>
+          </div>
 
-          <div className="m-4">
-            <h1 className="sm:text-2xl md:text-7xl font-bold">50+</h1>
+          <div className="mx-2 md:mx-20 md:my-8 flex flex-col items-center">
+            <h1 className="text-2xl md:text-7xl font-bold">50+</h1>
             <p className="text-xs md:text-lg text-gray-500 font-semibold">Satisfied Customers</p>
           </div>
-          <div className="m-4">
-           <h1 className="sm:text-2xl md:text-7xl font-bold">1st</h1>
-           <p className="text-xs md:text-lg text-gray-500 font-semibold">In Odisha</p> 
+          <div className="mx-2 md:mx-20 md:my-8 flex flex-col items-center">
+            <h1 className="text-2xl md:text-7xl font-bold">1st</h1>
+            <p className="text-xs md:text-lg text-gray-500 font-semibold">In Odisha</p>
+          </div>
+        </section>
+        <section className="flex my-4">
+          <img
+            src="/WhatsApp Image 2025-08-14 at 15.53.00_3628bfe7.jpg"
+            alt="Description of image"
+            className="w-1/2 h-auto rounded-2xl object-cover"
+          />
+          <div className="w-2/3 ">
+          <p></p>
+          <h1></h1>
+          <p></p>
+          <button></button>
           </div>
         </section>
 
