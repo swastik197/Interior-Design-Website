@@ -43,7 +43,7 @@ export default function Home() {
             </button>
           </div>
         </nav>
-        <section className="flex flex-col items-center justify-center min-h-[500px] md:min-h-screen min-w-full rounded-b-xl bg-cover bg-center bg-no-repeat px-4 pt-20" style={{ backgroundImage: "url('/0502010004-01-Minimalist-Interior-Style.jpg')" }}>
+        <section className="flex flex-col items-center justify-center min-h-[350px] md:min-h-[700px] lg:min-h-screen min-w-full rounded-b-xl bg-cover bg-center bg-no-repeat px-4 pt-20" style={{ backgroundImage: "url('/0502010004-01-Minimalist-Interior-Style.jpg')" }}>
 
           <h1 className={`text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
             }`}>
@@ -59,7 +59,7 @@ export default function Home() {
         <section className="w-full max-h-screen my-4 md:px-2 bg-white">
           {/* Mobile layout - stack vertically */}
           <div className="block md:hidden space-y-4">
-            <div className="w-full h-80 bg-gray-200 rounded-4xl relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/hero02.jpg')" }}>
+            <div className="w-full h-80 bg-gray-200 rounded-4xl border-l-8 border-r-8 border-white relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/hero02.jpg')" }}>
               <div className="p-0 absolute bottom-0 left-0 right-0">
                 <div className="p-2 bg-white rounded-tr-3xl w-fit">
                   <p className="text-xs mx-2 font-semibold text-black border-1 border-black rounded-2xl px-1 py-1 mb-1">Gorgeous Interior</p>
@@ -72,7 +72,7 @@ export default function Home() {
                 <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-tr-3xl max-w-full font-bold">Services</p>
               </div>
             </div>
-            <div className="flex flex-row w-full gap-2 h-40">
+            <div className="flex flex-row w-full gap-2 border-l-8 border-r-8 border-white h-40">
               <div className="bg-stone-100 p-4 w-1/3 flex flex-col justify-center rounded-2xl">
                 <div>
                   <p className="border-2 rounded-2xl text-black px-2 py-1 w-fit text-xs mb-2">Aesthetic</p>
@@ -90,7 +90,7 @@ export default function Home() {
           </div>
 
           {/* Desktop layout - grid */}
-          <div className="hidden md:grid grid-cols-3 grid-rows-3 gap-4 h-screen">
+          <div className="hidden md:grid grid-cols-3 grid-rows-3 gap-4 my-4 h-screen">
             <div className="p-1 bg-gray-200 col-span-2 row-span-3 rounded-4xl h-full relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/hero02.jpg')" }}>
               <div className="p-0 absolute bottom-0 left-0 right-0">
                 <div className="p-3 bg-white rounded-tr-4xl w-fit">
@@ -136,9 +136,9 @@ export default function Home() {
         </section>
 
         {/* Infinite Scroller Section */}
-        <section className="w-full py-16 bg-gradient-to-r from-gray-50 to-gray-100 overflow-hidden">
+        <section className="w-full py-4 bg-gradient-to-r from-gray-50 to-gray-100 ">
 
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center">
             <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Our Design Gallery</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">Discover endless inspiration from our portfolio of stunning interior designs</p>
           </div>
@@ -298,155 +298,165 @@ export default function Home() {
           </Marquee>
           {/* Second Row - Moving Left */}
           <Marquee speed={50} pauseOnHover={true} direction="right" >
-            <div className="flex space-x-6 animate-scroll-right mb-8">
-            <div className="flex-shrink-0 w-80 ml-6 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-teal-400 to-green-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Garden Room</h3>
-                  <p className="text-sm opacity-90">Nature Indoor</p>
+            <div className="flex space-x-6 animate-scroll-right mb-4">
+              <div className="flex-shrink-0 w-80 ml-6 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-teal-400 to-green-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Garden Room</h3>
+                    <p className="text-sm opacity-90">Nature Indoor</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Bringing outdoors in</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Bringing outdoors in</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-orange-400 to-red-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Art Studio</h3>
-                  <p className="text-sm opacity-90">Creative Space</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-orange-400 to-red-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Art Studio</h3>
+                    <p className="text-sm opacity-90">Creative Space</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Inspiration flows freely</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Inspiration flows freely</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-cyan-400 to-blue-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Spa Bathroom</h3>
-                  <p className="text-sm opacity-90">Wellness Focus</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-cyan-400 to-blue-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Spa Bathroom</h3>
+                    <p className="text-sm opacity-90">Wellness Focus</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Personal sanctuary</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Personal sanctuary</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-rose-400 to-pink-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Kids Room</h3>
-                  <p className="text-sm opacity-90">Playful Design</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-rose-400 to-pink-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Kids Room</h3>
+                    <p className="text-sm opacity-90">Playful Design</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Fun and functional</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Fun and functional</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-violet-400 to-purple-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Reading Nook</h3>
-                  <p className="text-sm opacity-90">Quiet Corner</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-violet-400 to-purple-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Reading Nook</h3>
+                    <p className="text-sm opacity-90">Quiet Corner</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Perfect for book lovers</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Perfect for book lovers</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-emerald-400 to-teal-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Dining Room</h3>
-                  <p className="text-sm opacity-90">Social Hub</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-emerald-400 to-teal-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Dining Room</h3>
+                    <p className="text-sm opacity-90">Social Hub</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Where memories are made</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Where memories are made</p>
-              </div>
-            </div>
 
-            {/* Duplicate set for seamless loop */}
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-teal-400 to-green-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Garden Room</h3>
-                  <p className="text-sm opacity-90">Nature Indoor</p>
+              {/* Duplicate set for seamless loop */}
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-teal-400 to-green-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Garden Room</h3>
+                    <p className="text-sm opacity-90">Nature Indoor</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Bringing outdoors in</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Bringing outdoors in</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-orange-400 to-red-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Art Studio</h3>
-                  <p className="text-sm opacity-90">Creative Space</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-orange-400 to-red-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Art Studio</h3>
+                    <p className="text-sm opacity-90">Creative Space</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Inspiration flows freely</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Inspiration flows freely</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-cyan-400 to-blue-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Spa Bathroom</h3>
-                  <p className="text-sm opacity-90">Wellness Focus</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-cyan-400 to-blue-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Spa Bathroom</h3>
+                    <p className="text-sm opacity-90">Wellness Focus</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Personal sanctuary</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Personal sanctuary</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-rose-400 to-pink-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Kids Room</h3>
-                  <p className="text-sm opacity-90">Playful Design</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-rose-400 to-pink-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Kids Room</h3>
+                    <p className="text-sm opacity-90">Playful Design</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Fun and functional</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Fun and functional</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-violet-400 to-purple-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Reading Nook</h3>
-                  <p className="text-sm opacity-90">Quiet Corner</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-violet-400 to-purple-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Reading Nook</h3>
+                    <p className="text-sm opacity-90">Quiet Corner</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Perfect for book lovers</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Perfect for book lovers</p>
-              </div>
-            </div>
 
-            <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
-              <div className="h-3/4 bg-gradient-to-br from-emerald-400 to-teal-600 relative">
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-xl font-bold">Dining Room</h3>
-                  <p className="text-sm opacity-90">Social Hub</p>
+              <div className="flex-shrink-0 w-80 h-60 bg-white rounded-2xl shadow-lg overflow-hidden group hover:scale-105 transition-transform duration-500">
+                <div className="h-3/4 bg-gradient-to-br from-emerald-400 to-teal-600 relative">
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold">Dining Room</h3>
+                    <p className="text-sm opacity-90">Social Hub</p>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm">Where memories are made</p>
                 </div>
               </div>
-              <div className="p-4">
-                <p className="text-gray-600 text-sm">Where memories are made</p>
-              </div>
-            </div>
             </div>
           </Marquee>
         </section>
+        <section className='w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
+          <div className="grid grid-cols-3 [grid-template-rows:1fr_0.29fr_1fr] w-[900px] md:w-[1400px] min-h-[400px] md:min-h-[600px] gap-4 py-4 px-2">
+            <div className="rounded-3xl bg-blue-400"></div>
+            <div className="rounded-3xl row-span-2 bg-red-400"></div>
+            <div className="rounded-3xl bg-green-400"></div>
+            <div className="rounded-3xl row-span-3 bg-yellow-400"></div>
+            <div className="rounded-3xl row-span-3 bg-pink-400"></div>
+            <div className="rounded-3xl bg-orange-400"></div>
+          </div>
 
+        </section>
       </main>
     </>
   );
