@@ -42,7 +42,7 @@ export default function Home() {
             Get Started
           </button>
         </section>
-        <section className="w-full min-h-screen my-2 md:my-4 md:px-2 bg-white">
+        <section className="w-full max-h-screen my-2 md:my-4 md:px-2 bg-white">
           {/* Mobile layout - stack vertically */}
           <div className="block md:hidden space-y-2">
             <div className="w-full h-80 bg-gray-200 rounded-4xl relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/hero02.jpg')" }}>
@@ -54,8 +54,8 @@ export default function Home() {
                 <p className="text-4xl text-black p-2 px-6 bg-white w-fit rounded-tr-3xl max-w-full font-bold">Services</p>
               </div>
             </div>
-            <div className="flex flex-row w-full gap-2 h-40">  
-               <div className="bg-stone-100 p-4 w-1/3 flex flex-col justify-center rounded-2xl">
+            <div className="flex flex-row w-full gap-2 h-40">
+              <div className="bg-stone-100 p-4 w-1/3 flex flex-col justify-center rounded-2xl">
                 <div>
                   <p className="border-2 rounded-2xl text-black px-2 py-1 w-fit text-xs mb-2">Aesthetic</p>
                   <p className="text-xs text-gray-700 mb-2">
@@ -93,8 +93,27 @@ export default function Home() {
 
             </div>
             <div className="bg-gray-400 row-span-2 p-4 flex items-center justify-center rounded-2xl bg-cover bg-center overflow-hidden " style={{ backgroundImage: "url('/spacejoy_q3_Qd86sfao_U_unsplash_ee33419bee.jpg')" }}>
-              
+
             </div>
+          </div>
+        </section>
+        <section className="w-full h-fit flex justify-between flex-wrap text-gray-800">
+          <div className="m-4">
+            <h1 className="sm:text-2xl md:text-7xl font-bold">500+</h1>
+            <p className="text-xs md:text-lg text-gray-500 font-semibold">Products</p>
+          </div>
+          <div className="m-4">
+            <h1 className="sm:text-2xl md:text-7xl  font-bold">20+</h1>
+            <p className="text-xs md:text-lg text-gray-500 font-semibold">Projects</p>
+            </div>
+
+          <div className="m-4">
+            <h1 className="sm:text-2xl md:text-7xl font-bold">50+</h1>
+            <p className="text-xs md:text-lg text-gray-500 font-semibold">Satisfied Customers</p>
+          </div>
+          <div className="m-4">
+           <h1 className="sm:text-2xl md:text-7xl font-bold">1st</h1>
+           <p className="text-xs md:text-lg text-gray-500 font-semibold">In Odisha</p> 
           </div>
         </section>
 
