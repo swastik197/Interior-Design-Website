@@ -494,14 +494,66 @@ export default function Home() {
           </div>
 
         </section>
-        <section className='bg-black text-white h-screen w-full mt-12 grid grid-cols-2 grid-rows-2'>
-          <div className='p-4 mx-6 w-fit'>
-            <h1 className='text-6xl md:my-14 leading-relaxed'>Engage with Us in <br/> Conversation.</h1>
-            <p>In a global world based on communication, a brand must look beyond its borders, open up to new experiences, and dare to be different. Meeting the brightest minds of one's time is the most effective way to nurture creativity</p>
+        
+        {/* Contact/Engagement Section */}
+        <section className='bg-black text-white w-full py-16 md:py-24'>
+          <div className='max-w-7xl mx-auto px-4 md:px-8'>
+            {/* Top row - Text and Image */}
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16'>
+              {/* Text Content */}
+              <div className='space-y-6'>
+                <h1 className='text-4xl md:text-6xl font-bold leading-tight'>
+                  Engage with Us in <br className='hidden md:block'/> Conversation.
+                </h1>
+                <p className='text-gray-300 text-lg leading-relaxed max-w-lg'>
+                  In a global world based on communication, a brand must look beyond its borders, open up to new experiences, and dare to be different. Meeting the brightest minds of one's time is the most effective way to nurture creativity.
+                </p>
+                <button className='mt-8 px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-100 transition duration-300'>
+                  Start Conversation
+                </button>
+              </div>
+              
+              {/* Image */}
+              <div className='flex flex-col space-y-6'>
+                <div className='flex justify-center md:justify-end'>
+                  <div className="w-full max-w-md h-[200px] md:h-[300px] bg-gray-800 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
+                    <img 
+                      src="/icon.png" 
+                      alt="Interior Design Conversation" 
+                      className="w-full h-full object-contain p-2" 
+                    />
+                  </div>
+                </div>
+                <div className='text-center md:text-right space-y-4'>
+                  <h1 className='text-4xl md:text-6xl font-bold'>MAX ELITE</h1>
+                  <div className='space-y-2 text-gray-300'>
+                    <p className='text-sm md:text-base leading-relaxed'>
+                      Address: Giri Market Complex, Arad Bazar, Near Nuniajodi Bridge, Balasore, Odisha, Pin - 756001
+                    </p>
+                    <p className='text-sm md:text-base font-medium'>
+                      Contact: +91 96740 34762, +91 77498 25303
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          <div></div>
-           <div className='col-span-2'></div>
-
+            
+            {/* Bottom row - Contact Form or Additional Content */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 border-t border-gray-800'>
+              <div className='text-center md:text-left'>
+                <h3 className='text-xl font-semibold mb-4'>Get in Touch</h3>
+                <p className='text-gray-400'>Ready to transform your space? Let's discuss your vision.</p>
+              </div>
+              <div className='text-center md:text-left'>
+                <h3 className='text-xl font-semibold mb-4'>Our Process</h3>
+                <p className='text-gray-400'>From concept to completion, we guide you through every step.</p>
+              </div>
+              <div className='text-center md:text-left'>
+                <h3 className='text-xl font-semibold mb-4'>Why Choose Us</h3>
+                <p className='text-gray-400'>Award-winning designs with personalized service and attention to detail.</p>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </>
