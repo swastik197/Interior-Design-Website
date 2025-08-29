@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Marquee from "react-fast-marquee";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -506,7 +507,7 @@ export default function Home() {
                   Engage with Us in <br className='hidden md:block'/> Conversation.
                 </h1>
                 <p className='text-gray-300 text-lg leading-relaxed max-w-lg'>
-                  In a global world based on communication, a brand must look beyond its borders, open up to new experiences, and dare to be different. Meeting the brightest minds of one's time is the most effective way to nurture creativity.
+                  In a global world based on communication, a brand must look beyond its borders, open up to new experiences, and dare to be different. Meeting the brightest minds of one&apos;s time is the most effective way to nurture creativity.
                 </p>
                 <button className='mt-8 px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-100 transition duration-300'>
                   Start Conversation
@@ -517,9 +518,11 @@ export default function Home() {
               <div className='flex flex-col space-y-6'>
                 <div className='flex justify-center md:justify-end'>
                   <div className="w-full max-w-md h-[200px] md:h-[300px] bg-gray-800 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
-                    <img 
+                    <Image 
                       src="/icon.png" 
                       alt="Interior Design Conversation" 
+                      width={400}
+                      height={300}
                       className="w-full h-full object-contain p-2" 
                     />
                   </div>
@@ -542,7 +545,7 @@ export default function Home() {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 border-t border-gray-800'>
               <div className='text-center md:text-left'>
                 <h3 className='text-xl font-semibold mb-4'>Get in Touch</h3>
-                <p className='text-gray-400'>Ready to transform your space? Let's discuss your vision.</p>
+                <p className='text-gray-400'>Ready to transform your space? Let&apos;s discuss your vision.</p>
               </div>
               <div className='text-center md:text-left'>
                 <h3 className='text-xl font-semibold mb-4'>Our Process</h3>
