@@ -5,18 +5,29 @@ import { useState, useEffect } from 'react';
 import Marquee from "react-fast-marquee";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  
+  const animatedWords = ['Home', 'Office', 'Kitchen', 'Bedroom', 'Bathroom', 'Studio'];
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % animatedWords.length);
+    }, 2000); // Change word every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [animatedWords.length]);
   return (
     <>
       <main className="flex flex-col  items-center min-h-screen w-full bg-white">
         <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between z-50 px-4 md:px-6 py-4  ">
           <div className="ml-2 md:ml-0">
-            <p className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">MAX ELITE</p>
+            <p className="text-xl md:text-2xl font-bold text-white drop-shadow-lg backdrop-blur-xl p-1.5 rounded-xl">MAX ELITE</p>
           </div>
-          <ul className="hidden md:flex md:space-x-4 text-gray-200 items-center px-6 py-2 rounded-full bg-black/20 backdrop-blur-md border border-white/10">
+          <ul className="hidden md:flex md:space-x-4 text-gray-200 items-center px-6 py-2 rounded-full bg-black/20 backdrop-blur-xl border border-white/10">
             <li className="active px-3 py-2 cursor-pointer hover:text-white transition-colors rounded-full hover:bg-white/10">Home</li>
             <li className="active px-3 py-2 cursor-pointer hover:text-white transition-colors rounded-full hover:bg-white/10">Services</li>
             <li className="active px-3 py-2 cursor-pointer hover:text-white transition-colors rounded-full hover:bg-white/10">About</li>
@@ -24,7 +35,7 @@ export default function Home() {
           </ul>
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button className="p-2 text-white bg-white/10 rounded-full backdrop-blur-sm">
+            <button className="p-2 text-white bg-white/5 rounded-full backdrop-blur-xl">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -49,7 +60,23 @@ export default function Home() {
             }`}>
             <span className="inline-block animate-pulse">Transform</span>{' '}
             <span className="inline-block bg-gradient-to-r from-pink-400 to-purple-600 bg-clip-text text-transparent animate-bounce">Your</span>{' '}
-            <span className="inline-block">Space</span>
+            <span className="inline-block relative " style={{ height: '1.2em', width: 'auto', minWidth: '200px' }}>
+              {animatedWords.map((word, index) => (
+                <span
+                  key={`${word}-${index}`}
+                  className={`absolute top-0 left-0 whitespace-nowrap transition-all duration-500 ease-in-out transform ${
+                    index === currentWordIndex
+                      ? 'translate-y-0 opacity-100'
+                      : 'translate-y-full opacity-0'
+                  }`}
+                  style={{ 
+                    transitionDelay: index === currentWordIndex ? '0ms' : '0ms'
+                  }}
+                >
+                  {word}
+                </span>
+              ))}
+            </span>
           </h1>
           <p className="mt-4 text-base md:text-lg text-white text-center max-w-2xl">We offer a variety of services to help you succeed.</p>
           <button className="mt-6 px-4 md:px-6 py-2 md:py-3 bg-white text-blue-500 rounded-full hover:bg-gray-100 transition duration-300 text-sm md:text-base">
@@ -138,9 +165,12 @@ export default function Home() {
         {/* Infinite Scroller Section */}
         <section className="w-full py-4 bg-gradient-to-r from-gray-50 to-gray-100 ">
 
-          <div className="mb-8 text-center">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Our Design Gallery</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Discover endless inspiration from our portfolio of stunning interior designs</p>
+          <div className="mb-8 mx-2 md:mx-8 my-4 flex flex-col md:flex-row md:justify-between items-baseline">
+            <h2 className="text-3xl md:text-6xl font-bold text-gray-800 mb-1">Proudly Presenting Our <br/> Services</h2>
+            <div className='md:flex flex-col items-end justify-between'>
+           <button className='hidden md:block p-2 bg-black text-white rounded-2xl my-2'>View More</button>
+            <p className="text-md text-gray-600 max-w-xl md:mx-8  truncate">Discover endless inspiration from our portfolio<br/> of stunning interior designs</p>
+            </div>
           </div>
 
           {/* First Row - Moving Right */}
@@ -447,7 +477,14 @@ export default function Home() {
           </Marquee>
         </section>
         <section className='w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
-          <div className="grid grid-cols-3 [grid-template-rows:1fr_0.29fr_1fr] w-[900px] md:w-[1400px] min-h-[400px] md:min-h-[600px] gap-4 py-4 px-2">
+          <div className="w-full px-4 md:px-8 mb-8 my-4 flex flex-col md:flex-row md:justify-between items-baseline">
+            <h2 className="text-3xl md:text-6xl font-bold text-gray-800 mb-1">Showcasing the Strength of <br/> Our Expertise</h2>
+            <div className='md:flex flex-col items-end justify-between'>
+           <button className='hidden md:block p-2 bg-black text-white rounded-2xl my-2'>View More</button>
+            <p className="text-md text-gray-600 max-w-xl md:mx-8 truncate">Discover endless inspiration from our portfolio<br/> of stunning interior designs</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 [grid-template-rows:1fr_0.29fr_1fr] w-[900px] md:w-[1400px] min-h-[400px] md:min-h-[600px] gap-4 py-4 px-4 md:px-2 mx-auto">
             <div className="rounded-3xl bg-blue-400"></div>
             <div className="rounded-3xl row-span-2 bg-red-400"></div>
             <div className="rounded-3xl bg-green-400"></div>
@@ -455,6 +492,15 @@ export default function Home() {
             <div className="rounded-3xl row-span-3 bg-pink-400"></div>
             <div className="rounded-3xl bg-orange-400"></div>
           </div>
+
+        </section>
+        <section className='bg-black text-white h-screen w-full mt-12 grid grid-cols-2 grid-rows-2'>
+          <div className='p-4 mx-6 w-fit'>
+            <h1 className='text-6xl md:my-14 leading-relaxed'>Engage with Us in <br/> Conversation.</h1>
+            <p>In a global world based on communication, a brand must look beyond its borders, open up to new experiences, and dare to be different. Meeting the brightest minds of one's time is the most effective way to nurture creativity</p>
+            </div>
+          <div></div>
+           <div className='col-span-2'></div>
 
         </section>
       </main>
