@@ -79,7 +79,7 @@ export default function Scroller() {
           <h2 className="text-3xl md:text-6xl font-bold text-gray-800 mb-1">Proudly Presenting Our <br /> Services</h2>
           <div className='md:flex flex-col items-end justify-between'>
             <button className='hidden md:block p-2 bg-black text-white rounded-2xl my-2'>View More</button>
-            <p className="text-md text-end text-gray-600 max-w-xl truncate">Discover endless inspiration from our portfolio<br /> of stunning interior designs</p>
+            <p className="text-md md:text-end text-gray-600 max-w-xl truncate">Discover endless inspiration from our portfolio<br /> of stunning interior designs</p>
           </div>
         </div>
 

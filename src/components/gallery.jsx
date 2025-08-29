@@ -8,10 +8,10 @@ export default function Gallery() {
         <>
             <section className='w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
                 <div className="w-full px-4 md:px-8 mb-8 my-4 flex flex-col md:flex-row md:justify-between items-baseline">
-                    <h2 className="text-3xl md:text-6xl font-bold text-gray-800 mb-1">Showcasing the Strength of <br /> Our Expertise</h2>
+                    <h2 className="text-3xl md:text-6xl font-bold text-gray-800 mb-1">Our Work Sepaks</h2>
                     <div className='md:flex flex-col items-end justify-between'>
                         <button className='hidden md:block p-2 bg-black text-white rounded-2xl my-2'>View More</button>
-                        <p className="text-md leading-relaxed text-end text-gray-600 max-w-xl truncate">Discover endless inspiration from our portfolio<br /> of stunning interior designs</p>
+                        <p className="text-md leading-relaxed md:text-end text-gray-600 max-w-xl truncate">Discover endless inspiration from our portfolio <br /> of stunning interior designs</p>
                     </div>
                 </div>
                 <div className="grid grid-cols-3 [grid-template-rows:1fr_0.29fr_1fr] w-[900px] md:w-[1400px] min-h-[400px] md:min-h-[600px] gap-4 py-4 px-4 md:px-2 mx-auto">
